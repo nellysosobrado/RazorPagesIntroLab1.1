@@ -4,9 +4,31 @@
 }
 <h1> Champions Page</h1>
 
-<ul>
+<table class= "table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Damage</th
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var champ in Model.Champions)
+        {
+            <tr>
+                <td>@champ.Id</td>
+                <td>@champ.Name</td>
+                <td>@champ.Damage</td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
+
+@* <ul>
     @foreach(var champ in Model.Champions)
     {
         <li>@champ.Name</li>
     }
-</ul>
+</ul> *@
