@@ -17,4 +17,13 @@ namespace RazorPagesIntroLab1._1.Pages
         {
         }
     }
+    public class SupplierViewModel
+    {
+        public List<SupplierViewModel> Suppliers { get; set; } = new();
+        public int Id { get; set; }
+        public string CompanyName { get; set; } 
+        public string Region { get; set; }
+    }
+
+    
 }
