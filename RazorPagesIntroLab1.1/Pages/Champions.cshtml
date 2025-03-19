@@ -3,3 +3,10 @@
 @{
 }
 <h1> Champions Page</h1>
+
+<ul>
+    @foreach(var champ in Model.Champions)
+    {
+        <li>@champ.Name</li>
+    }
+</ul>
