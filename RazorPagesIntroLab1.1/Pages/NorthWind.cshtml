@@ -12,6 +12,7 @@
             <th scope="col">Id</th>
             <th scope="col">Company Name</th>
             <th scope="col">Region</th>
+            <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
@@ -22,6 +23,12 @@
                 <td>@supp.Id</td>
                 <td>@supp.CompanyName</td>
                 <td>@supp.Region</td>
+                <td> 
+                    <a asp-page="/SupplierInfo" asp-route-suppId="@supp.Id" class="btn btn-primary">
+                        See Info
+                        
+                    </a>
+                </td>
             </tr>
         }
     </tbody>
