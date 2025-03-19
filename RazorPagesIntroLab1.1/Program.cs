@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using RazorPagesIntroLab1._1.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,7 +9,6 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<NorthwindContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-var app = builder.Build();
 
 
 var app = builder.Build();
