@@ -6,6 +6,7 @@ namespace RazorPagesIntroLab1._1.Pages
 {
     public class NorthWindModel : PageModel
     {
+        
         private readonly NorthwindContext _dbContext;
 
         public NorthWindModel(NorthwindContext dbContext)
