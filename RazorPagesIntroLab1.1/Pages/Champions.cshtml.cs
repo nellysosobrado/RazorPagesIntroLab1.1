@@ -13,8 +13,25 @@ namespace RazorPagesIntroLab1._1.Pages
             public int Damage { get; set; }
         }
         public List<ChampionViewModel> Champions { get; set; } = new();// En lista av ChampionViewModel objekt
-        public void OnGet() //funktion som körs när sidan laddas
+        public void OnGet() // GET förfrågan, funktion som körs när sidan laddas
         {
+            //Adds 3 champions to the Champions list
+            Champions.Add(new ChampionViewModel
+            {
+                Id = 1, Name="Annie", Damage = 100,
+            });
+            Champions.Add(new ChampionViewModel
+            {
+                Id = 2,
+                Name = "Brand",
+                Damage = 110,
+
+            });
+            Champions.Add(new ChampionViewModel
+            {
+                Id = 3, Name = "Calista", Damage = 130,
+
+            });
         }
     }
 }
