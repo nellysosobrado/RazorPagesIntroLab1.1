@@ -2,3 +2,19 @@
 @model RazorPagesIntroLab1._1.Pages.SupplierInfoModel
 @{
 }
+
+<div class="card">
+    <h1>@Model.CompanyName</h1>
+    <div class="card-body">
+        <p>@Model.ContactName</p>
+        <p>@Model.City</p>
+    </div>
+</div>
+
+@*Bonus*@
+@if (Model.City=="London")
+{
+    <div>
+        London!
+    </div>
+}
