@@ -12,18 +12,26 @@ namespace RazorPagesIntroLab1._1.Pages
         {
             _dbContext = dbContext;
         }
-
+        public class SupplierViewModel
+        {
+            
+            public int Id { get; set; }
+            public string CompanyName { get; set; }
+            public string Region { get; set; }
+        }
+        public List<SupplierViewModel> Suppliers { get; set; } = new();
         public void OnGet()
         {
+            Suppliers = _dbContext.Suppliers.Select(s => new SupplierViewModel
+            {
+                Id = s.SupplierId,
+                CompanyName = s.CompanyName,
+                Region = s.Region
+            }).ToList();
         }
-    }
-    public class SupplierViewModel
-    {
-        public List<SupplierViewModel> Suppliers { get; set; } = new();
-        public int Id { get; set; }
-        public string CompanyName { get; set; } 
-        public string Region { get; set; }
+
     }
 
-    
+
+
 }
